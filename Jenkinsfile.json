@@ -1,0 +1,26 @@
+{
+  "app": {
+    "name": "api-demo",
+    "replicas": "3",
+    "cpu": "10m",
+    "memory": "128Mi",
+    "test": false,
+    "hostname": "api-demo.acs.juliencorioland.net"
+  },
+  "container_repo": {
+    "host": "jcorioland.azurecr.io",
+    "master_acct": "jcorioland",
+    "alt_acct": "jcorioland",
+    "jenkins_creds_id": "acr_creds",
+    "repo": "api-demo",
+    "dockeremail": ".",
+    "dockerfile": "./"
+  },
+  "pipeline": {
+      "enabled": true,
+      "debug": false,
+      "library": {
+        "branch": "master"
+      }
+  }
+}
