@@ -9,8 +9,8 @@
   },
   "container_repo": {
     "host": "jcorioland.azurecr.io",
-    "master_acct": "jcorioland",
-    "alt_acct": "jcorioland",
+    "master_acct": "msexperiences",
+    "alt_acct": "msexperiences",
     "jenkins_creds_id": "acr_creds",
     "repo": "api-demo",
     "dockeremail": ".",
