@@ -13,6 +13,8 @@ imageTag: "latest"
 imagePullPolicy: "Always"
 cpu: "10m"
 memory: "128Mi"
+redisHost: "10.0.126.125"
+redisPassword: "Nll2J7rn6u"
 # Ingress settings
 ingress:
   enabled: true

@@ -52,13 +52,7 @@ spec:
               cpu: "{{.Values.cpu}}"
               memory: "{{.Values.memory}}"
           env:
-          - name: WORKFLOW_RELEASE
-            value: {{.Release.Name | quote }}
-          livenessProbe:
-            httpGet:
-              path: /healthz
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /healthz
-              port: http
+          - name: redisHost
+            value: {{.Values.redisHost}}
+          - name: redisPassword
+            value: {{.Values.redisPassword}}
