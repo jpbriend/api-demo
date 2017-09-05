@@ -1,0 +1,9 @@
+name: api-demo
+home: https://github.com/jpbriend/api-demo
+version: 0.1.0
+description: Simple SpringBoot API that can be deployed on Kubernetes
+sources:
+  - https://github.com/jpbriend/api-demo
+maintainers:
+  - name: Jean-Philippe Briend
+  - name: Julien Corioland
