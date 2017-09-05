@@ -14,7 +14,7 @@
     "jenkins_creds_id": "acr_creds",
     "repo": "api-demo",
     "dockeremail": ".",
-    "dockerfile": "./"
+    "dockerfile": "./Dockerfile.jenkins"
   },
   "pipeline": {
       "enabled": true,
