@@ -15,12 +15,5 @@
     "repo": "api-demo",
     "dockeremail": ".",
     "dockerfile": "./"
-  },
-  "pipeline": {
-      "enabled": true,
-      "debug": false,
-      "library": {
-        "branch": "master"
-      }
   }
 }
