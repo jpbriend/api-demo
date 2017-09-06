@@ -15,6 +15,6 @@ public class HelloController {
         } catch (Exception e) {
             // nothing.
         }
-        return "Hello World! I am running on " + hostname;
+        return "Hello MS Experiences! I am running on " + hostname;
     }
 }
