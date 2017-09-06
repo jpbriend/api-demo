@@ -27,7 +27,6 @@ volumes:[
     // read in required jenkins workflow config values
     def inputFile = readFile('Jenkinsfile.json')
     def config = new groovy.json.JsonSlurperClassic().parseText(inputFile)
-    println "pipeline config ==> ${config}"
 
     // set additional git envvars for image tagging
     pipeline.gitEnvVars()
@@ -45,9 +44,8 @@ volumes:[
 
       container ('maven') {
         sh "mvn install"
-        
-        sh "ls -a ./target/"
       }
+
     }
 
     // Test Helm deployment (dry-run)
@@ -79,12 +77,9 @@ volumes:[
 
       container('docker') {
 
-        sh 'ls -a ./target'
-
         // perform docker login
         withCredentials([[$class          : 'UsernamePasswordMultiBinding', credentialsId: config.container_repo.jenkins_creds_id,
                         usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
-          println "docker config ==> ${config.container_repo.dockeremail} ${env.USERNAME} ${env.PASSWORD} ${config.container_repo.host}"
           sh "docker login -e ${config.container_repo.dockeremail} -u ${env.USERNAME} -p ${env.PASSWORD} ${config.container_repo.host}"
         }
 
